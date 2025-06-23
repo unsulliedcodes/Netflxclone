@@ -5,6 +5,7 @@ import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
 import profile_image from "../../assets/profile_img.png";
 import caret from "../../assets/caret_icon.svg";
+import { logOut } from "../../firebase";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -29,7 +30,7 @@ const Navbar = () => {
           <li>Movies</li>
           <li>New & Popular</li>
           <li>My List</li>
-          <li>Browser My Language</li>
+          <li>Browse My Language</li>
         </ul>
       </div>
       <div className="navbar-right">
@@ -40,7 +41,13 @@ const Navbar = () => {
           <img src={profile_image} alt="" className="profile" />
           <img src={caret} alt="" />
           <div className="dropdown">
-            <p>Sign Out of Netflix</p>
+            <p
+              onClick={() => {
+                logOut();
+              }}
+            >
+              Sign Out of Netflix
+            </p>
           </div>
         </div>
       </div>
