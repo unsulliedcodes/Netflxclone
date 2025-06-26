@@ -27,7 +27,7 @@
   gap: 10px;
   margin-bottom: 50px;
 }
-.hero-btn .btn  {
+.hero-btn .btn {
   border: 0;
   outline: 0;
   padding: 8px 20px;
@@ -47,12 +47,53 @@
   color: white;
   background-color: #6d6d6eb3;
 }
-.hero-btn .btn:hover{
+.hero-btn .btn:hover {
   background: #ffffffbf;
 }
-.hero-btn .btn.dark-btn:hover{
+.hero-btn .btn.dark-btn:hover {
   background: #6d6d6e66;
 }
-.more-cards{
+.more-cards {
   padding-left: 6%;
+}
+@media (max-width: 1024px) {
+  .hero-caption .title-cards {
+    display: none;
+  }
+  .hero-btn {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .hero-caption {
+    padding-left: 4%;
+  }
+  .caption-img {
+    margin-bottom: 10px;
+    width: 40%;
+  }
+  .hero-caption p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .hero-btn .btn img {
+    width: 20px;
+  }
+  .more-cards {
+    padding-left: 4%;
+  }
+}
+
+@media (max-width: 500px) {
+  .caption-img {
+    display: none;
+  }
+  .hero-btn .btn img {
+    width: 15px;
+  }
+  .hero-btn .btn {
+    padding: 4px 10px;
+    gap: px;
+    font-size: 10px;
+  }
 }
